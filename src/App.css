@@ -1,38 +1,100 @@
+/* ALL RULES */
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  margin: 30px auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* APP */
+
 .App {
-  text-align: center;
+  max-width: 100vw;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* TITLES */
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form {
+  display: flex;
+  flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form span {
+  font-weight: 100;
+  font-size: 12px;
+}
+
+.form input {
+  background-color: #fcf9f9;
+  border-radius: 5px;
+  border: 1px solid #d3d3d3;
+  height: 45px;
+  width: 300px;
+  padding-left: 10px;
+  margin: 5px 0 25px;
+}
+
+button {
+  color: white;
+  background-color: #5c47d3;
+  border: 1px solid #5c47d3;
+  font-size: 15px;
+  font-weight: 700;
+  height: 45px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-size: 15px;
+}
+
+footer {
+  height: 200px;
+  margin-top: 150px;
+}
+
+footer span {
+  font-weight: 700;
+}
+
+.results {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.info {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: #f2f2f2;
+  align-items: flex-start;
+  width: 250px;
+  border: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.return-button {
+  width: 250px;
 }
