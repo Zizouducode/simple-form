@@ -41,48 +41,52 @@ const Form = () => {
       {registered ? (
         ""
       ) : (
-        <form className="form" onSubmit={handleSubmit}>
-          <span>Name</span>
-          <input
-            type="text"
-            placeholder="Your name"
-            name="firstname"
-            value={name}
-            onChange={handleNameChange}
-          />
-          <span>Email</span>
-          <input
-            type="email"
-            placeholder="your-email@mail.com"
-            name="eamail"
-            value={email}
-            onChange={handleEmailChange}
-          />
-          <span>Password</span>
-          <input
-            type="password"
-            placeholder="P@ssW0rd"
-            name="password"
-            value={password}
-            onChange={handlePasswordChange}
-          />
-          <span>Confirm your passord</span>
-          <input
-            type="password"
-            placeholder="P@ssW0rd"
-            name="password-confirmation"
-            value={passwordConfirmation}
-            onChange={handlePasswordConfirmationChange}
-          />
-          {passwordOK ? (
-            ""
-          ) : (
-            <p className="error">Les mots de passe ne sont pas identiques</p>
-          )}
-          <button type="submit" value="submit">
-            Register
-          </button>
-        </form>
+        <>
+          {" "}
+          <h1>Create account</h1>
+          <form className="form" onSubmit={handleSubmit}>
+            <span>Name</span>
+            <input
+              type="text"
+              placeholder="Your name"
+              name="firstname"
+              value={name}
+              onChange={handleNameChange}
+            />
+            <span>Email</span>
+            <input
+              type="email"
+              placeholder="your-email@mail.com"
+              name="eamail"
+              value={email}
+              onChange={handleEmailChange}
+            />
+            <span>Password</span>
+            <input
+              type="password"
+              placeholder="P@ssW0rd"
+              name="password"
+              value={password}
+              onChange={handlePasswordChange}
+            />
+            <span>Confirm your passord</span>
+            <input
+              type="password"
+              placeholder="P@ssW0rd"
+              name="password-confirmation"
+              value={passwordConfirmation}
+              onChange={handlePasswordConfirmationChange}
+            />
+            {passwordOK ? (
+              ""
+            ) : (
+              <p className="error">Les mots de passe ne sont pas identiques</p>
+            )}
+            <button type="submit" value="submit">
+              Register
+            </button>
+          </form>
+        </>
       )}
       <StepTwo
         name={name}
